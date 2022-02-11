@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import '../style.css';
 
-class Header extends Component {
+class Home extends Component {
     render() {
         return (
             <header>
@@ -22,4 +22,4 @@ class Header extends Component {
     }
 }
 
-export default Header
+export default Home

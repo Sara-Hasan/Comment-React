@@ -1,20 +1,31 @@
-import React , {Component} from 'react';
-import './App.css';
-import Greet from './components/Greet';
-import Welcome from './components/Welcome';
+import React from "react";
+import "./App.css";
+import Comment from "./component/Comment";
+import Container from "./component/Container";
+import Nav from "./component/Nav";
+// import Home from './component/Home';
+import Register from "./component/Register";
+import Login from "./component/Login";
+import { Routes, Route } from "react-router-dom";
 
-class App extends Component {
-  render() {
-    return (
-      // <div className="App">
-      //     {/* <Greet Name="Haitham"/>
-      //     <Welcome /> */}
-      //     {/* <Welcome id="one" />
-      //     <Welcome id="two" />
-      //     <Welcome id="three" /> */}
-      // </div>
-    )
-  }
+function App() {
+  return (
+    <div>
+      <Nav />
+      <Routes>
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route
+          path="/comment"
+          element={
+            <Container>
+              <Comment />
+            </Container>
+          }
+        />
+      </Routes>
+    </div>
+  );
 }
 
 export default App;
